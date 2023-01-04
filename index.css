@@ -47,39 +47,6 @@ button {
     padding: 1em 2em;
 }
 
-/* Media Queries */
-@media (min-width:1200px) and (max-width: 1400px) {
-    h1 {
-        font-size: 3em !important;
-    }
-    h3 {
-        font-size: 2em !important;
-    }
-    button{
-        padding:0.8em 1.6em;
-        font-size:0.9em !important;
-    }
-}
-
-@media (min-width:992px) and (max-width: 1199px) {
-    h1 {
-        font-size: 2em !important;
-    }
-    h3 {
-        font-size: 1.5em !important;
-    }
-    button {
-        padding: 0.7em 1.4em;
-        font-size: 0.8em !important;
-    }
-}
-
-@media (min-width:768px) and (max-width: 991px) {}
-
-@media (min-width:576px) and (max-width: 767px) {}
-
-@media (max-width:575px) {}
-
 /* Header */
 header {
     background: url('images/header-bg.png');
@@ -90,7 +57,7 @@ header {
 }
 
 header>div {
-    height: 90vh;
+    height: 100vh;
     color: white;
 }
 
@@ -104,3 +71,92 @@ header>div {
     background-color: #0F1819;
 }
 
+/* Media Queries */
+@media (min-width:1200px) and (max-width: 1400px) {
+    h1 {
+        font-size: 3em !important;
+    }
+
+    h3 {
+        font-size: 2em !important;
+    }
+
+    button {
+        padding: 0.8em 1.6em;
+        font-size: 0.9em !important;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1199px) {
+    h1 {
+        font-size: 2em !important;
+    }
+
+    h3 {
+        font-size: 1.5em !important;
+    }
+
+    button {
+        padding: 0.7em 1.4em;
+        font-size: 0.8em !important;
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    header {
+        background: url('images/header-img.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100vh;
+    }
+
+    h1,h3,.button-container{
+        text-align:center;
+    }
+}
+
+@media (min-width:576px) and (max-width: 767px) {
+    header {
+        background: url('images/header-img.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100vh;
+    }
+
+    h1,h3,.button-container{
+        text-align:center;
+    }
+
+    h1 {
+        font-size: 3em !important;
+    }
+
+    h3 {
+        font-size: 2em !important;
+    }
+
+}
+
+@media (max-width:575px) {
+    header {
+        background: url('images/header-img.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100vh;
+    }   
+
+    h1,h3,.button-container{
+        text-align:center;
+    }
+
+    h1 {
+        font-size: 2em !important;
+    }
+
+    h3 {
+        font-size: 1.5em !important;
+    }
+}
