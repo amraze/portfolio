@@ -35,7 +35,8 @@ button {
 button:hover,
 button:focus {
     border-color: var(--hover);
-    color: #FF3439;
+    color: white;
+    background-color: #ff34374d;
 }
 
 button {
@@ -56,7 +57,7 @@ header {
     height: 100vh;
 }
 
-header>div {
+header>div, section>div {
     height: 100vh;
     color: white;
 }
@@ -71,9 +72,19 @@ header>div {
     background-color: #0F1819;
 }
 
+.image-container>img{
+    width:60%;
+}
+
 /* Media Queries */
+@media (min-width:1445px){
+    .image-container>img {
+        width: 450px;
+    }
+}
+
 @media (min-width:1200px) and (max-width: 1400px) {
-    h1 {
+    header>div>div>h1 {
         font-size: 3em !important;
     }
 
@@ -88,8 +99,12 @@ header>div {
 }
 
 @media (min-width:992px) and (max-width: 1199px) {
-    h1 {
+    header>div>div>h1 {
         font-size: 2em !important;
+    }
+
+    section>div{
+        font-size:0.9rem !important;
     }
 
     h3 {
@@ -111,6 +126,10 @@ header>div {
         height: 100vh;
     }
 
+    .about-me {
+        background: none;
+    }
+
     h1,h3,.button-container{
         text-align:center;
     }
@@ -125,11 +144,19 @@ header>div {
         height: 100vh;
     }
 
+    .about-me {
+        background: none;
+    }
+
+    .about-me>div>div{
+        font-size: 0.9em !important;
+    }
+
     h1,h3,.button-container{
         text-align:center;
     }
 
-    h1 {
+    header>div>div>h1 {
         font-size: 3em !important;
     }
 
@@ -137,6 +164,10 @@ header>div {
         font-size: 2em !important;
     }
 
+    button {
+        padding: 0.8em 1.6em;
+        font-size: 0.9em !important;
+    }
 }
 
 @media (max-width:575px) {
@@ -148,15 +179,28 @@ header>div {
         height: 100vh;
     }   
 
+    .about-me {
+        background: none;
+    }
+
+    .about-me>div>div {
+        font-size: 0.75em !important;
+    }
+
     h1,h3,.button-container{
         text-align:center;
     }
 
-    h1 {
+    header>div>div>h1 {
         font-size: 2em !important;
     }
 
     h3 {
         font-size: 1.5em !important;
+    }
+    
+    button {
+        padding: 0.7em 1.4em;
+        font-size: 0.8em !important;
     }
 }
