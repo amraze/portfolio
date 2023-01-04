@@ -1,0 +1,106 @@
+/* General */
+body{
+    margin:0;
+    font-family: 'Montserrat' !important;
+    background-color: #0F1819 !important;
+}
+
+h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900 !important;
+    font-size:4em !important;
+}
+
+h3{
+    font-size:2.5em !important;
+}
+
+.raise:hover,
+.raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+}
+
+.raise {
+    --color: white;
+    --hover: #FF3439;
+}
+
+button {
+    color: var(--color);
+    transition: 0.25s;
+}
+
+button:hover,
+button:focus {
+    border-color: var(--hover);
+    color: #FF3439;
+}
+
+button {
+    background: none;
+    border: 2px solid;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+}
+
+/* Media Queries */
+@media (min-width:1200px) and (max-width: 1400px) {
+    h1 {
+        font-size: 3em !important;
+    }
+    h3 {
+        font-size: 2em !important;
+    }
+    button{
+        padding:0.8em 1.6em;
+        font-size:0.9em !important;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1199px) {
+    h1 {
+        font-size: 2em !important;
+    }
+    h3 {
+        font-size: 1.5em !important;
+    }
+    button {
+        padding: 0.7em 1.4em;
+        font-size: 0.8em !important;
+    }
+}
+
+@media (min-width:768px) and (max-width: 991px) {}
+
+@media (min-width:576px) and (max-width: 767px) {}
+
+@media (max-width:575px) {}
+
+/* Header */
+header {
+    background: url('images/header-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+}
+
+header>div {
+    height: 90vh;
+    color: white;
+}
+
+/* About Me */
+.about-me {
+    background: url('images/about-me-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    background-color: #0F1819;
+}
+
