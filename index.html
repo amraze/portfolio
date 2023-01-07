@@ -16,7 +16,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -36,8 +36,7 @@
             </div>
         </section>
         <section class="about-me" data-aos="fade-in" data-aos-duration="2000">
-            <h1 class="mt-lg-5 pt-lg-5 mt-md-0 pt-md-0 mt-5 pt-5 container text-white" data-aos="fade-in"
-                data-aos-delay="200">About Me
+            <h1 class="mt-5 pt-5 container text-white" data-aos="fade-in" data-aos-delay="200">About Me
             </h1>
             <div class="container text-center text-lg-start mt-lg-5 pt-5">
                 <div class="col-lg-6">
@@ -52,13 +51,66 @@
                         <b>memorable</b> and <b>delivered on time.</b>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center image-container">
                     <img class="d-block d-lg-none" src="images/about-me-img.png" style="object-fit:contain;"
                         width="80%">
                 </div>
             </div>
         </section>
-        <section class="experience"></section>
+        <section class="experience" data-aos="fade-in" data-aos-duration="2000">
+            <h1 class="mt-5 pt-5 container text-white" data-aos="fade-in" data-aos-delay="200">
+                Experience
+            </h1>
+            <section id="timeline" class="container">
+                <div class="tl-item mx-auto" onmouseleave="showFirstTitle()" onmouseover="hideFirstTitle()">
+                    <div class="tl-bg" style="background-image: url('images/aga-cube.png')"></div>
+                    <div class="tl-year">
+                        <p class="f2 my-3">Web Developer</p>
+                    </div>
+                    <div class="tl-content">
+                        <h1 id="date">Jun 2022 - Aug 2022</h1>
+                        <div class="text-start px-lg-5">
+                            <p>I've worked as a <b>Full stack Web Developer</b> at <b>AGA CUBE</b> using a KanBan Board
+                                in "<b>Jira Software</b>."<br>
+                                I've created branches for each feature, writen the
+                                logic of each task, found and resolved bugs and performed the necessary unit tests.
+                            </p>
+                            <p>Keywords :
+                                <span class="badge badge-pill bg-light text-dark">cakePHP</span>
+                                <span class="badge badge-pill bg-light text-dark">jQuery</span>
+                                <span class="badge badge-pill bg-light text-dark">AJAX</span>
+                                <span class="badge badge-pill bg-light text-dark">GitFlow</span>
+                                <span class="badge badge-pill bg-light text-dark">PHPUnit</span>
+                                <span class="badge badge-pill bg-light text-dark">Xdebug</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-item mx-auto" onmouseleave="showSecondTitle()" onmouseover="hideSecondTitle()">
+                    <div class="tl-bg" style="background-image: url('images/junior.png')"></div>
+                    <div class="tl-year">
+                        <p class="f2 my-3">Project Manager</p>
+                    </div>
+                    <div class="tl-content text-start px-lg-5">
+                        <h1 id="date" class="f3 text--accent ttu">Aug 2022 - Present</h1>
+                        <p>I've worked as a <b>Project Manager</b> at <b>Sup'Com Junior Enterprise</b>.<br>
+                            I've led numerous groups in order to produce <b>projects</b> with real clients by
+                            organizing weekly meetings and interacting with them.
+                            I've also done <b>trainings</b> in the technologies we use in Sup'Com Junior Entreprise for
+                            the active members.
+                        </p>
+                        <p>Keywords :
+                            <span class="badge badge-pill bg-light text-dark">Project Management</span>
+                            <span class="badge badge-pill bg-light text-dark">Agil/Scrum</span>
+                            <span class="badge badge-pill bg-light text-dark">KanBan Board</span>
+                            <span class="badge badge-pill bg-light text-dark">GitFlow</span>
+                            <span class="badge badge-pill bg-light text-dark">PHPUnit</span>
+                            <span class="badge badge-pill bg-light text-dark">Xdebug</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </section>
         <section class="projects"></section>
         <section class="footer"></section>
     </div>

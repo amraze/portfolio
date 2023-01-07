@@ -16,8 +16,7 @@ section{
     scroll-snap-align: center;
 }
 
-h1{
-    font-family: 'Montserrat';
+.header>div>div>h1, .about-me>h1, .experience>h1{
     font-style: normal;
     font-weight: 900 !important;
     font-size:4em !important;
@@ -87,6 +86,119 @@ button {
     width:60%;
 }
 
+/* Experience */
+.experience {
+    background: url('images/experience-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-color: #0F1819;
+}
+
+#timeline {
+    display: flex;
+}
+
+.tl-item {
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    width: 50%;
+    height:70vh;
+    color: #fff;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+.tl-item:before,
+.tl-item:after {
+    transform: translate3d(0, 0, 0);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tl-item:after {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.tl-item:before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 75%);
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(0, 0, 0) translateY(50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tl-item:hover {
+    width: 80% !important;
+}
+
+.tl-item:hover:after {
+    opacity: 0;
+}
+
+.tl-item:hover:before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) translateY(0);
+    transition: opacity 1s ease, transform 1s ease 0.25s;
+}
+
+.tl-item:hover .tl-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.75s ease 0.5s;
+}
+
+.tl-item:hover .tl-bg {
+    filter: grayscale(0);
+}
+
+.tl-content {
+    transform: translate3d(0, 0, 0) translateY(25px);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0 1.618em;
+    top: 35%;
+    opacity: 0;
+}
+
+.tl-content h1 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+.tl-year {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    white-space: nowrap;
+        overflow: hidden;
+}
+
+.tl-bg {
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    transition: filter 0.5s ease;
+    filter: grayscale(100%);
+}
+
 /* Media Queries */
 @media (min-width:1445px){
     .image-container>img {
@@ -95,7 +207,7 @@ button {
 }
 
 @media (min-width:1200px) and (max-width: 1400px) {
-    .header>div>div>h1 {
+    .header>div>div>h1, .about-me>h1, .experience>h1 {
         font-size: 3em !important;
     }
 
@@ -110,7 +222,7 @@ button {
 }
 
 @media (min-width:992px) and (max-width: 1199px) {
-    .header>div>div>h1 {
+    .header>div>div>h1, .about-me>h1, .experience>h1 {
         font-size: 2em !important;
     }
 
@@ -144,6 +256,18 @@ button {
     h1,h3,.button-container{
         text-align:center;
     }
+
+    #timeline {
+        display: grid;
+    }
+
+    .tl-item {
+        height: 40vh;
+    }
+
+    .tl-content{
+        top:10%;
+    }
 }
 
 @media (min-width:576px) and (max-width: 767px) {
@@ -167,7 +291,7 @@ button {
         text-align:center;
     }
 
-    .header>div>div>h1 {
+    .header>div>div>h1, .about-me>h1, .experience>h1 {
         font-size: 3em !important;
     }
 
@@ -178,6 +302,18 @@ button {
     button {
         padding: 0.8em 1.6em;
         font-size: 0.9em !important;
+    }
+
+    #timeline {
+        display: grid;
+    }
+
+    .tl-item {
+        height: 40vh;
+    }
+
+    .tl-content {
+        top: 0%;
     }
 }
 
@@ -202,7 +338,7 @@ button {
         text-align:center;
     }
 
-    .header>div>div>h1 {
+    .header>div>div>h1, .about-me>h1, .experience>h1 {
         font-size: 2em !important;
     }
 
@@ -213,5 +349,25 @@ button {
     button {
         padding: 0.7em 1.4em;
         font-size: 0.8em !important;
+    }
+
+    #timeline {
+        display: grid;
+    }
+
+    .tl-item{
+        height:40vh;
+    }
+
+    .tl-content {
+        top: 0%;
+    }
+
+    .tl-content{
+        font-size:0.75em !important;
+    }
+
+    #date{
+        font-size:1.5em !important;
     }
 }

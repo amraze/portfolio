@@ -27,6 +27,27 @@ aosAnimation.forEach(aosObject => {
     observer.observe(aosObject);
 });
 
+function hideFirstTitle() {
+    var year = $('.tl-year');
+    year[0].style.display = "none";
+}
+
+function hideSecondTitle() {
+    var year = $('.tl-year');
+    year[1].style.display = "none";
+}
+
+function showFirstTitle() {
+    var year = $('.tl-year');
+    year[0].style.display = "block";
+}
+
+function showSecondTitle() {
+    var year = $('.tl-year');
+    year[1].style.display = "block";
+}
+
 
 // AOS
 AOS.init();
+
