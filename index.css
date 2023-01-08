@@ -16,7 +16,7 @@ section{
     scroll-snap-align: center;
 }
 
-.header>div>div>h1, .about-me>h1, .experience>h1{
+.header>div>div>h1, .about-me>h1, .experience>h1, .projects>h1, .footer>h1, .footer>h1{
     font-style: normal;
     font-weight: 900 !important;
     font-size:4em !important;
@@ -26,24 +26,21 @@ h3{
     font-size:2.5em !important;
 }
 
-.raise:hover,
-.raise:focus {
+.raise:hover {
     box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
     transition:0.5s;
 }
 
-.raise {
+.raise,a {
     --color: white;
     --hover: #FF3439;
 }
 
 button {
     color: var(--color);
-    transition: 0.25s;
 }
 
-button:hover,
-button:focus {
+button:hover {
     border-color: var(--hover);
     color: white;
     background-color: #ff34374d;
@@ -199,6 +196,43 @@ button {
     filter: grayscale(100%);
 }
 
+/* Projects */
+.projects {
+    background: url('images/project-1-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    background-color: #0F1819;
+}
+
+/* Contact */
+.footer{
+    background: url('images/footer-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-color: #0F1819;
+}
+
+.work-with-me{
+    font-size:3em;
+}
+
+.contact-me{
+    font-size:0.8em;
+    font-weight:bold;
+}
+
+.icons a{
+    transition:0.5s;
+}
+
+.icons a:hover{
+    color:#FF3439 !important; 
+    font-size:larger !important;
+}
 /* Media Queries */
 @media (min-width:1445px){
     .image-container>img {
@@ -207,7 +241,7 @@ button {
 }
 
 @media (min-width:1200px) and (max-width: 1400px) {
-    .header>div>div>h1, .about-me>h1, .experience>h1 {
+    .header>div>div>h1, .about-me>h1, .experience>h1, .projects>h1, .footer>h1 {
         font-size: 3em !important;
     }
 
@@ -222,12 +256,16 @@ button {
 }
 
 @media (min-width:992px) and (max-width: 1199px) {
-    .header>div>div>h1, .about-me>h1, .experience>h1 {
+    .header>div>div>h1, .about-me>h1, .experience>h1, .projects>h1, .footer>h1 {
         font-size: 2em !important;
     }
 
     section>div{
         font-size:0.9rem !important;
+    }
+    
+    .footer>div{
+        font-size:3rem !important;
     }
 
     h3 {
@@ -249,7 +287,7 @@ button {
         height: 100vh;
     }
 
-    .about-me {
+    .about-me, .projects {
         background: none;
     }
 
@@ -259,6 +297,7 @@ button {
 
     #timeline {
         display: grid;
+        height:40vh;
     }
 
     .tl-item {
@@ -279,7 +318,7 @@ button {
         height: 100vh;
     }
 
-    .about-me {
+    .about-me, .projects {
         background: none;
     }
 
@@ -291,7 +330,7 @@ button {
         text-align:center;
     }
 
-    .header>div>div>h1, .about-me>h1, .experience>h1 {
+    .header>div>div>h1, .about-me>h1, .experience>h1, .projects>h1, .footer>h1 {
         font-size: 3em !important;
     }
 
@@ -306,6 +345,7 @@ button {
 
     #timeline {
         display: grid;
+        height: 40vh;
     }
 
     .tl-item {
@@ -314,6 +354,10 @@ button {
 
     .tl-content {
         top: 0%;
+    }
+
+    .footer>div {
+        font-size: 2rem !important;
     }
 }
 
@@ -326,7 +370,7 @@ button {
         height: 100vh;
     }   
 
-    .about-me {
+    .about-me, .projects {
         background: none;
     }
 
@@ -338,7 +382,7 @@ button {
         text-align:center;
     }
 
-    .header>div>div>h1, .about-me>h1, .experience>h1 {
+    .header>div>div>h1, .about-me>h1, .experience>h1, .projects>h1, .footer>h1 {
         font-size: 2em !important;
     }
 
@@ -353,14 +397,15 @@ button {
 
     #timeline {
         display: grid;
+        height: 40vh;
     }
 
-    .tl-item{
-        height:40vh;
+    .tl-item {
+        height: 40vh;
     }
 
     .tl-content {
-        top: 0%;
+        top: 10%;
     }
 
     .tl-content{
@@ -369,5 +414,13 @@ button {
 
     #date{
         font-size:1.5em !important;
+    }
+
+    .footer>div {
+        font-size: 2rem !important;
+    }
+
+    .work-with-me{
+        padding-left:50px !important;
     }
 }
